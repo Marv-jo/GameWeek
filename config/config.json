@@ -7,7 +7,6 @@
         {"name": "quit", "src": "assets/menu/quit.png"}
     ],
     "assets" : [
-        {"name": "player", "src": "assets/player.png"},
         {"name": "enemy", "src": "assets/enemy.png"},
         {"name": "ground", "src": "assets/ground_1x1.png"}
     ],

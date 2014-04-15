@@ -5,6 +5,8 @@ function Player(game, x, y) {
     this.vitesse = 4;
     this.action = false
     this.sprite = game.add.sprite(this.x, this.y, 'player');
+    this.sprite.animations.add('walk');
+    this.sprite.animations.play('walk', 20, true);
 }
 
 Player.prototype.move = function(){
