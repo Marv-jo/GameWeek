@@ -25,15 +25,26 @@ LevelState.prototype =
 
     game.world.setBounds(0, 0, 1920, 1200);
     game.player = new Player(game);
-    game.clone = new Clone(game, game.width - 100, 200);
+    game.clone = new Clone(game, game.width - 100, 100);
     game.level = getLevel();
     game.keyBoard = game.input.keyboard.createCursorKeys();
+    game.physics.enable(game.player.sprite);
+    game.physics.arcade.gravity.y = 250;
+    game.physics.enable(game.clone.sprite);
+    
+    game.player.sprite.body.bounce.y = 0.2;
+    game.player.sprite.linearDamping = 1;
+    game.player.sprite.collideWorldBounds = true;
 
+    game.clone.sprite.body.bounce.y = 0.2;
+    game.clone.sprite.linearDamping = 1;
+    game.clone.sprite.collideWorldBounds = true;
   },
 
   update:  function(game)
   {
     game.physics.arcade.collide(game.player.sprite, game.layer);
+    game.physics.arcade.collide(game.clone.sprite, game.layer);
     //Debut Appel Waves
     for (var i=0; i < game.level.waves.length; i++){
       game.tabEnemy.push(new Enemy(game,game.level.waves[i].x,game.level.waves[i].y,game.level.waves[i].maxX,game.level.waves[i].minX))
@@ -47,7 +58,10 @@ LevelState.prototype =
     game.player.move();
 
     game.clone.move();
+    game.clone.sprite.body.velocity.x = 0;
     game.clone.jump();
+
+    game.player.sprite.body.velocity.x = 0;
     game.player.jump();
   }
 };
