@@ -25,6 +25,7 @@ LevelState.prototype =
     game.layer.debug = true;
     game.world.setBounds(0, 0, 1920, 1200);
     game.player = new Player(game);
+    game.clone = new Clone(game, game.width - 100, 200);
     game.level = getLevel();
     game.keyBoard = game.input.keyboard.createCursorKeys();
   },
@@ -42,6 +43,9 @@ LevelState.prototype =
     }
     game.camera.x += 2;
     game.player.move();
+
+    game.clone.move();
+    game.clone.jump();
   }
 };
 

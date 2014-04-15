@@ -13,21 +13,8 @@ Player.prototype.move = function(){
 		this.sprite.x -= this.vitesse; 
 	}
 
-	// if (game.keyBoard.left.isDown)
- //    {	
- //    	this.sprite.x -= this.vitesse; 
- //    }
     else if (game.keyBoard.right.isDown)
     {
         this.sprite.x += this.vitesse;
-    }
-
-    if (game.keyBoard.up.isDown)
-    {
-        this.sprite.y -= this.vitesse;
-    }
-    else if (game.keyBoard.down.isDown)
-    {
-        this.sprite.y += this.vitesse;
     }
 }
