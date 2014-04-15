@@ -11,8 +11,13 @@
         {"name": "ground", "src": "assets/ground_1x1.png"}
     ],
     "sprite" : [
+<<<<<<< HEAD
         {"name": "entree", "src": "assets/entree.png", "width": 64, "height" : 128, "nombre" : 8},
         {"name": "player", "src": "assets/sprite-course-Jaques.png", "width": 64, "height" : 64, "nombre" : 8}
+=======
+        {"name": "sortie", "src": "assets/sortie.png", "width": 64, "height" : 128, "nombre" : 8},
+        {"name": "entree", "src": "assets/entree.png", "width": 64, "height" : 128, "nombre" : 8}
+>>>>>>> 8c4e04c6181740711f20217867d38aa1408b3361
     ],
     "enemyLevel" : [
         {"id": "enemy1", "x": 10, "y": 10, "minX": 10, "maxX": 500},

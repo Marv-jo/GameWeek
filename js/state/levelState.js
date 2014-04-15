@@ -29,6 +29,7 @@ LevelState.prototype =
 
     game.world.setBounds(0, 0, 1920, 1200);
     game.entree = new Entree(game);
+    game.sortie = new Sortie(game);
     game.player = new Player(game);
     game.clone = new Clone(game, 300, 100);
     game.level = getLevel();
