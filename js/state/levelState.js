@@ -28,11 +28,7 @@ LevelState.prototype =
     game.clone = new Clone(game, game.width - 100, 200);
     game.level = getLevel();
     game.keyBoard = game.input.keyboard.createCursorKeys();
-    game.physics.enable(game.player.sprite);
-    game.physics.arcade.gravity.y = 250;
-    game.player.sprite.body.bounce.y = 0.2;
-    game.player.sprite.linearDamping = 1;
-    game.player.sprite.collideWorldBounds = true;
+
   },
 
   update:  function(game)
@@ -52,25 +48,6 @@ LevelState.prototype =
 
     game.clone.move();
     game.clone.jump();
-
-    game.player.sprite.body.velocity.x = 0;
-
-    if (game.keyBoard.up.isDown)
-    {
-        if (game.player.sprite.body.onFloor())
-        {
-            game.player.sprite.body.velocity.y = -200;
-        }
-    }
-
-    if (game.keyBoard.left.isDown)
-    {
-        game.player.sprite.body.velocity.x = -150;
-    }
-    else if (game.keyBoard.right.isDown)
-    {
-        game.player.sprite.body.velocity.x = 150;
-    }
   }
 };
 
