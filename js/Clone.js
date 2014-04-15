@@ -26,7 +26,7 @@ Clone.prototype.jump = function() {
     {
         if (this.sprite.body.onFloor())
         {
-            this.sprite.body.velocity.y = -400;
+            this.sprite.body.velocity.y = -210;
         }
     }
 
