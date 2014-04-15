@@ -8,6 +8,9 @@ LevelState.prototype =
     for (var i = 0 ; i  < list.assets.length ; i++){ 
       game.load.image(list.assets[i].name, list.assets[i].src);
     };
+    for (var i = 0 ; i  < list.sprite.length ; i++){
+      game.load.spritesheet(list.sprite[i].name, list.sprite[i].src, list.sprite[i].width, list.sprite[i].height, list.sprite[i].nombre);
+    };
     game.tabEnemy = [];
   },
 
@@ -24,6 +27,7 @@ LevelState.prototype =
     game.map.setCollisionBetween(1, 12);
 
     game.world.setBounds(0, 0, 1920, 1200);
+    game.entree = new Entree(game);
     game.player = new Player(game);
     game.clone = new Clone(game, game.width - 100, 100);
     game.level = getLevel();
@@ -54,7 +58,9 @@ LevelState.prototype =
     for (var i = 0; i < game.tabEnemy.length; i++){ 
         game.tabEnemy[i].move();
     }
-    game.camera.x += 2;
+    if(game.player.action == true){
+      game.camera.x += 2;
+    }
     game.player.move();
 
     game.clone.move();

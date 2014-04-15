@@ -3,6 +3,7 @@ function Player(game, x, y) {
     this.x = x || 200;
     this.y = y || 200;
     this.vitesse = 4;
+    this.action = false
     this.sprite = game.add.sprite(this.x, this.y, 'player');
 }
 
@@ -10,11 +11,17 @@ Player.prototype.move = function(){
     if (this.sprite.x <= game.camera.x) {
         this.sprite.x += this.vitesse; 
     } else if(game.keyBoard.left.isDown) {
+        if(this.action == false){
+            this.action = true;
+        }    
         this.sprite.x -= this.vitesse; 
     }
 
     else if (game.keyBoard.right.isDown)
     {
+        if(this.action == false){
+            this.action = true;
+        }    
         this.sprite.x += this.vitesse;
     }
 }
