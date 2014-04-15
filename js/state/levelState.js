@@ -48,6 +48,7 @@ LevelState.prototype =
 
     game.clone.move();
     game.clone.jump();
+    game.player.jump();
   }
 };
 
