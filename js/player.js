@@ -13,13 +13,11 @@ Player.prototype.move = function(){
         this.sprite.x -= this.vitesse; 
     }
 
-<<<<<<< HEAD
-=======
     // if (game.keyBoard.left.isDown)
  //    {    
  //     this.sprite.x -= this.vitesse; 
  //    }
->>>>>>> f6fb3d21f218a547abd2960c50971a0a99963f1c
+
     else if (game.keyBoard.right.isDown)
     {
         this.sprite.x += this.vitesse;

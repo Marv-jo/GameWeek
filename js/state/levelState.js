@@ -49,11 +49,10 @@ LevelState.prototype =
     }
     game.camera.x += 2;
     game.player.move();
-<<<<<<< HEAD
 
     game.clone.move();
     game.clone.jump();
-=======
+
     game.player.sprite.body.velocity.x = 0;
 
     if (game.keyBoard.up.isDown)
@@ -72,7 +71,6 @@ LevelState.prototype =
     {
         game.player.sprite.body.velocity.x = 150;
     }
->>>>>>> f6fb3d21f218a547abd2960c50971a0a99963f1c
   }
 };
 
