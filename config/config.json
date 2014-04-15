@@ -1,0 +1,17 @@
+{
+    "assetsMenu" : [
+        {"name": "play", "src": "assets/menu/play.png"},
+        {"name": "options", "src": "assets/menu/options.png"},
+        {"name": "credits", "src": "assets/menu/credits.png"},
+        {"name": "retour", "src": "assets/menu/retour.png"},
+        {"name": "quit", "src": "assets/menu/quit.png"}
+    ],
+    "assets" : [
+        {"name": "player", "src": "assets/player.png"},
+        {"name": "enemy", "src": "assets/enemy.png"}
+    ],
+    "enemyLevel" : [
+        {"id": "enemy1", "x": 10, "y": 10, "minX": 10, "maxX": 500},
+        {"id": "enemy2", "x": 10, "y": 350, "minX": 10, "maxX": 500}
+    ]
+}
