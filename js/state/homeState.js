@@ -2,7 +2,7 @@ window.addEventListener("load",init);
 
 function init()
 {
-  game = new Phaser.Game(800, 600, Phaser.AUTO, 'gameContainer');
+  game = new Phaser.Game(800, 640, Phaser.AUTO, 'gameContainer');
   //on ajoute les states du jeu a game
   game.state.add('HomeState' ,HomeState);
   game.state.add('MenuState' ,MenuState);

@@ -12,6 +12,9 @@ LevelState.prototype =
     for (var i = 0 ; i  < list.sprite.length ; i++){
       game.load.spritesheet(list.sprite[i].name, list.sprite[i].src, list.sprite[i].width, list.sprite[i].height, list.sprite[i].nombre);
     };
+    for (var i = 0 ; i  < list.spriteTiled.length ; i++){
+      game.load.spritesheet(list.spriteTiled[i].name, list.spriteTiled[i].src, list.spriteTiled[i].width, list.spriteTiled[i].height);
+    };
     game.tabEnemy = [];
   },
 
@@ -20,16 +23,20 @@ LevelState.prototype =
     game.physics.startSystem(Phaser.Physics.ARCADE);
     game.add.sprite(0, 0, 'background');
     game.map = game.add.tilemap('map');
-
-    game.map.addTilesetImage('ground');
-    
+    game.map.addTilesetImage('spritesheet');  
     game.layer = game.map.createLayer('Calque 1');
-
-    game.map.setCollisionBetween(1, 12);
-
-    game.world.setBounds(0, 0, 1920, 1200);
-    game.entree = new Entree(game);
-    game.sortie = new Sortie(game);
+    game.map.setCollisionBetween(1, 63);
+    game.world.setBounds(0, 0, 2560, 1200);
+    game.entree = game.add.group();
+    game.map.createFromObjects('Calque objets 1', 81, 'entree', 0, true, false, game.entree);
+    //  Add animations to all of the entree sprites
+    game.entree.callAll('animations.add', 'animations', 'entree', [0, 1, 2, 3, 4, 5, 6, 7], 10, false);
+    game.entree.callAll('animations.play', 'animations', 'entree');
+    game.sortie = game.add.group();
+    game.map.createFromObjects('Calque objets 1', 73, 'sortie', 0, true, false, game.sortie);
+    //  Add animations to all of the sortie sprites
+    game.sortie.callAll('animations.add', 'animations', 'sortie', [0, 1, 2, 3, 4, 5, 6, 7], 10, false);
+    game.sortie.callAll('animations.play', 'animations', 'sortie');
     game.player = new Player(game);
     game.clone = new Clone(game, 300, 100);
     game.level = getLevel();

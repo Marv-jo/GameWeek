@@ -8,12 +8,14 @@
     ],
     "assets" : [
         {"name": "enemy", "src": "assets/enemy.png"},
-        {"name": "ground", "src": "assets/ground_1x1.png"}
+        {"name": "spritesheet", "src": "assets/spritesheet.png"}
     ],
     "sprite" : [
-        {"name": "player", "src": "assets/sprite-course-Jaques.png", "width": 64, "height" : 64, "nombre" : 8},
-        {"name": "sortie", "src": "assets/sortie.png", "width": 64, "height" : 128, "nombre" : 8},
-        {"name": "entree", "src": "assets/entree.png", "width": 64, "height" : 128, "nombre" : 8}
+        {"name": "player", "src": "assets/sprite-course-Jaques.png", "width": 64, "height" : 64, "nombre" : 8}
+    ],
+    "spriteTiled" : [
+        {"name": "sortie", "src": "assets/sortie.png", "width": 64, "height" : 128},
+        {"name": "entree", "src": "assets/entree.png", "width": 64, "height" : 128}
     ],
     "enemyLevel" : [
         {"id": "enemy1", "x": 10, "y": 10, "minX": 10, "maxX": 500},
