@@ -11,6 +11,9 @@
         {"name": "enemy", "src": "assets/enemy.png"},
         {"name": "ground", "src": "assets/ground_1x1.png"}
     ],
+    "sprite" : [
+        {"name": "entree", "src": "assets/entree.png", "width":"64", "height" : "128", "nombre" : "8"}
+    ],
     "enemyLevel" : [
         {"id": "enemy1", "x": 10, "y": 10, "minX": 10, "maxX": 500},
         {"id": "enemy2", "x": 10, "y": 350, "minX": 10, "maxX": 500}
