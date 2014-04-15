@@ -15,7 +15,7 @@ LevelState.prototype =
     game.tabEnemy = [];
   },
 
-  create:  function(game) 
+  create:  function(game)
   {
     game.physics.startSystem(Phaser.Physics.ARCADE);
     game.add.sprite(0, 0, 'background');
@@ -30,11 +30,11 @@ LevelState.prototype =
     game.world.setBounds(0, 0, 1920, 1200);
     game.entree = new Entree(game);
     game.player = new Player(game);
-    game.clone = new Clone(game, game.width - 100, 100);
+    game.clone = new Clone(game, 300, 100);
     game.level = getLevel();
     game.keyBoard = game.input.keyboard.createCursorKeys();
     game.physics.enable(game.player.sprite);
-    game.physics.arcade.gravity.y = 250;
+    game.physics.arcade.gravity.y = 300;
     game.physics.enable(game.clone.sprite);
     
     game.player.sprite.body.bounce.y = 0.2;
@@ -70,6 +70,7 @@ LevelState.prototype =
 
     game.player.sprite.body.velocity.x = 0;
     game.player.jump();
+    game.player.mort();
   }
 };
 

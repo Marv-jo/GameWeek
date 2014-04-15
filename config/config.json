@@ -11,7 +11,8 @@
         {"name": "ground", "src": "assets/ground_1x1.png"}
     ],
     "sprite" : [
-        {"name": "entree", "src": "assets/entree.png", "width": 64, "height" : 128, "nombre" : 8}
+        {"name": "entree", "src": "assets/entree.png", "width": 64, "height" : 128, "nombre" : 8},
+        {"name": "player", "src": "assets/sprite-course-Jaques.png", "width": 64, "height" : 64, "nombre" : 8}
     ],
     "enemyLevel" : [
         {"id": "enemy1", "x": 10, "y": 10, "minX": 10, "maxX": 500},

@@ -4,6 +4,7 @@ function Clone(game, x, y) {
     this.y = y || 200;
     this.vitesse = 4;
     this.sprite = game.add.sprite(this.x, this.y, 'player');
+    this.sprite.animations.add('walk');
 }
 
 Clone.prototype.move = function(){
@@ -16,6 +17,7 @@ Clone.prototype.move = function(){
     else if (game.keyBoard.right.isDown)
     {
         this.sprite.x += this.vitesse;
+        this.sprite.animations.play('walk', 20, true); 
     }
 }
 
@@ -24,7 +26,7 @@ Clone.prototype.jump = function() {
     {
         if (this.sprite.body.onFloor())
         {
-            this.sprite.body.velocity.y = -200;
+            this.sprite.body.velocity.y = -400;
         }
     }
 
