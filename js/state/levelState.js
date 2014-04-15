@@ -13,6 +13,7 @@ LevelState.prototype =
 
   create:  function(game) 
   {
+    game.physics.startSystem(Phaser.Physics.ARCADE);
     game.add.sprite(0, 0, 'background');
     game.map = game.add.tilemap('map');
 
@@ -22,17 +23,22 @@ LevelState.prototype =
 
     game.map.setCollisionBetween(1, 12);
 
-    game.layer.debug = true;
     game.world.setBounds(0, 0, 1920, 1200);
     game.player = new Player(game);
     game.clone = new Clone(game, game.width - 100, 200);
     game.level = getLevel();
     game.keyBoard = game.input.keyboard.createCursorKeys();
+    game.physics.enable(game.player.sprite);
+    game.physics.arcade.gravity.y = 250;
+    game.player.sprite.body.bounce.y = 0.2;
+    game.player.sprite.linearDamping = 1;
+    game.player.sprite.collideWorldBounds = true;
   },
 
   update:  function(game)
   {
-        //Debut Appel Waves
+    game.physics.arcade.collide(game.player.sprite, game.layer);
+    //Debut Appel Waves
     for (var i=0; i < game.level.waves.length; i++){
       game.tabEnemy.push(new Enemy(game,game.level.waves[i].x,game.level.waves[i].y,game.level.waves[i].maxX,game.level.waves[i].minX))
       game.level.waves.splice(i,1);
@@ -43,9 +49,30 @@ LevelState.prototype =
     }
     game.camera.x += 2;
     game.player.move();
+<<<<<<< HEAD
 
     game.clone.move();
     game.clone.jump();
+=======
+    game.player.sprite.body.velocity.x = 0;
+
+    if (game.keyBoard.up.isDown)
+    {
+        if (game.player.sprite.body.onFloor())
+        {
+            game.player.sprite.body.velocity.y = -200;
+        }
+    }
+
+    if (game.keyBoard.left.isDown)
+    {
+        game.player.sprite.body.velocity.x = -150;
+    }
+    else if (game.keyBoard.right.isDown)
+    {
+        game.player.sprite.body.velocity.x = 150;
+    }
+>>>>>>> f6fb3d21f218a547abd2960c50971a0a99963f1c
   }
 };
 
