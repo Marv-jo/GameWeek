@@ -11,6 +11,7 @@
         {"name": "ground", "src": "assets/ground_1x1.png"}
     ],
     "sprite" : [
+        {"name": "sortie", "src": "assets/sortie.png", "width": 64, "height" : 128, "nombre" : 8},
         {"name": "entree", "src": "assets/entree.png", "width": 64, "height" : 128, "nombre" : 8}
     ],
     "enemyLevel" : [
