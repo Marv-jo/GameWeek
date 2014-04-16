@@ -35,7 +35,7 @@ Player.prototype.move = function(){
             this.action = true;
         }    
         this.sprite.x += this.vitesse;
-        this.sprite.animations.play('walk', 20, true); 
+        this.sprite.animations.play('walk', 5, true); 
     } else {
         
     }
