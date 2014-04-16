@@ -13,10 +13,15 @@
     "sprite" : [
         {"name": "player", "src": "assets/sprite-course-Jaques.png", "width": 64, "height" : 64, "nombre" : 8},
         {"name": "saut", "src": "assets/sprite-saut-Jaques.png", "width": 64, "height" : 64, "nombre" : 3},
+        {"name": "sortie", "src": "assets/sortie.png", "width": 64, "height" : 128, "nombre" : 8},
+        {"name": "entree", "src": "assets/entree.png", "width": 64, "height" : 128, "nombre" : 8},
         {"name": "player", "src": "assets/sprite-course-Jaques.png", "width": 64, "height" : 64, "nombre" : 8}
     ],
     "spriteTiled" : [
         {"name": "sortie", "src": "assets/sortie.png", "width": 64, "height" : 128},
+        {"name": "entree", "src": "assets/entree.png", "width": 64, "height" : 128},
+        {"name": "plateforme", "src": "assets/spriteplateforme1.png", "width": 192, "height" : 63},
+        {"name": "plateforme2", "src": "assets/spriteplateforme2.png", "width": 192, "height" : 63},
         {"name": "entree", "src": "assets/entree.png", "width": 64, "height" : 128}
     ],
     "enemyLevel" : [

@@ -16,7 +16,7 @@
          "name":"Calque objets 1",
          "objects":[
                 {
-                 "gid":81,
+                 "gid":24,
                  "height":0,
                  "name":"",
                  "properties":
@@ -26,11 +26,11 @@
                  "type":"",
                  "visible":true,
                  "width":0,
-                 "x":7,
-                 "y":639
+                 "x":30,
+                 "y":414
                 }, 
                 {
-                 "gid":73,
+                 "gid":16,
                  "height":0,
                  "name":"",
                  "properties":
@@ -40,8 +40,134 @@
                  "type":"",
                  "visible":true,
                  "width":0,
-                 "x":546,
-                 "y":638
+                 "x":953,
+                 "y":401
+                }, 
+                {
+                 "gid":32,
+                 "height":0,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":-36,
+                 "y":469
+                }, 
+                {
+                 "gid":32,
+                 "height":0,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":88,
+                 "y":469
+                }, 
+                {
+                 "gid":32,
+                 "height":0,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":368,
+                 "y":616
+                }, 
+                {
+                 "gid":32,
+                 "height":0,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":211,
+                 "y":469
+                }, 
+                {
+                 "gid":32,
+                 "height":0,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":492,
+                 "y":616
+                }, 
+                {
+                 "gid":32,
+                 "height":0,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":616,
+                 "y":616
+                }, 
+                {
+                 "gid":32,
+                 "height":0,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":481,
+                 "y":330
+                }, 
+                {
+                 "gid":35,
+                 "height":0,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":889,
+                 "y":458
+                }, 
+                {
+                 "gid":35,
+                 "height":0,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":765,
+                 "y":459
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -73,7 +199,7 @@
          "tilewidth":64
         }, 
         {
-         "firstgid":73,
+         "firstgid":16,
          "image":"..\/assets\/sortie.png",
          "imageheight":128,
          "imagewidth":512,
@@ -88,7 +214,7 @@
          "tilewidth":64
         }, 
         {
-         "firstgid":81,
+         "firstgid":24,
          "image":"..\/assets\/entree.png",
          "imageheight":128,
          "imagewidth":512,
@@ -101,6 +227,36 @@
          "spacing":0,
          "tileheight":128,
          "tilewidth":64
+        }, 
+        {
+         "firstgid":32,
+         "image":"..\/assets\/spriteplateforme1.png",
+         "imageheight":64,
+         "imagewidth":768,
+         "margin":0,
+         "name":"spriteplateforme1",
+         "properties":
+            {
+
+            },
+         "spacing":0,
+         "tileheight":63,
+         "tilewidth":194
+        }, 
+        {
+         "firstgid":35,
+         "image":"..\/assets\/spriteplateforme2.png",
+         "imageheight":64,
+         "imagewidth":768,
+         "margin":0,
+         "name":"spriteplateforme2",
+         "properties":
+            {
+
+            },
+         "spacing":0,
+         "tileheight":64,
+         "tilewidth":192
         }],
  "tilewidth":64,
  "version":1,
