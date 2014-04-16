@@ -34,19 +34,24 @@ LevelState.prototype =
     game.physics.enable(game.player.sprite);
     game.physics.arcade.gravity.y = 300;
     game.physics.enable(game.clone.sprite);
-    
     game.player.sprite.body.bounce.y = 0.2;
-    game.player.sprite.linearDamping = 1;
-    game.player.sprite.collideWorldBounds = true;
+    game.player.sprite.body.linearDamping = 1;
+    game.player.sprite.body.collideWorldBounds = true;
 
     game.clone.sprite.body.bounce.y = 0.2;
-    game.clone.sprite.linearDamping = 1;
-    game.clone.sprite.collideWorldBounds = true;
+    game.clone.sprite.body.linearDamping = 1;
+    game.clone.sprite.body.collideWorldBounds = true;
+    console.log(game.tiles.plateforme.children[1])
+    console.log(game.tiles.plateforme.children[1].animations)
   },
 
   update:  function(game)
   {
     game.physics.arcade.collide(game.player.sprite, game.layer);
+    game.physics.arcade.collide(game.player.sprite, game.tiles.plateforme);
+    game.physics.arcade.collide(game.clone.sprite, game.tiles.plateforme);
+    game.physics.arcade.collide(game.player.sprite, game.tiles.plateforme2);
+    game.physics.arcade.collide(game.clone.sprite, game.tiles.plateforme2);
     game.physics.arcade.collide(game.clone.sprite, game.layer);
     //Debut Appel Waves
     for (var i=0; i < game.level.waves.length; i++){
@@ -71,6 +76,31 @@ LevelState.prototype =
     game.player.mort();
   }
 };
+
+function collisionCarre(cible1, cible2){//on envoie dans les cible l'id des elements
+
+    cible1 // on convertie les cible en l'objet DOM 
+    cible2  
+
+    cible1X = cible1.sprite.x;    //on prend la position a gauche du premié element
+    cible1XSprite = cible1X + cible1.width; // sa position a gauche + sa largeur
+
+    cible1Y = cible1.sprite.y; //pareil mais avec le top
+    cible1YSprite = cible1Y + cible1.height; 
+
+    cible2X = cible2.position.x;
+    cible2XSprite = cible2X + cible2.animations.currentFrame.width
+
+    cible2Y = cible2.position.y;
+    cible2YSprite = cible2Y + cible2.animations.currentFrame.height
+
+    if (cible1XSprite > cible2X && cible1X < cible2XSprite && cible1YSprite >= cible2Y && cible1Y < cible2YSprite){
+        return true; // si collision on renvoie vraie
+    }
+    else{
+        return false; // sinon on renvoie faux
+    }
+}
 
 function getLevel(){
     var waves = [];
