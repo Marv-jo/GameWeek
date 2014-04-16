@@ -7,16 +7,7 @@ function Player(game, x, y) {
     this.action = false;
     this.sprite = game.add.sprite(this.x, this.y, 'player');
     this.sprite.animations.add('walk');
-
-    //this.saut = game.add.sprite(this.x, this.y, 'saut');
-
-    // this.sprite = {
-    //     runRight: game.add.sprite(this.x, this.y, 'player')
-    // };
-
-    // this.sprite.runRight;
-
-    //test();
+    //game.input.onDown.addOnce(changeSprite, this);
 }
 
 Player.prototype.move = function(){
@@ -25,10 +16,14 @@ Player.prototype.move = function(){
     }
 
     if(game.keyBoard.left.isDown) {
+        this.sprite.loadTexture('runLeft', 0);
+        this.sprite.animations.add('left');
+        this.sprite.animations.play('left', 10, true);
+
         if(this.action == false){
             this.action = true;
         }    
-        this.sprite.x -= this.vitesse; 
+         this.sprite.body.velocity.x = -200; 
     }
 
     if (game.keyBoard.right.isDown)
@@ -36,8 +31,8 @@ Player.prototype.move = function(){
         if(this.action == false){
             this.action = true;
         }    
-        this.sprite.x += this.vitesse;
-        this.sprite.animations.play('walk', 5, true); 
+         this.sprite.body.velocity.x = 200;
+        this.sprite.animations.play('walk', 10, true); 
     } else {
         
     }
@@ -45,24 +40,24 @@ Player.prototype.move = function(){
 
 Player.prototype.jump = function() {
     if (this.game.keyBoard.up.isDown)
-    {
-        // this.sprite = game.add.sprite(this.x, this.y, 'saut');
-        // this.sprite.animations.add('jump');
-        // this.saut.animations.play('jump', 20, true); 
+    { 
+        this.sprite.loadTexture('saut', 0);
+        this.sprite.animations.add('jump');
+        this.sprite.animations.play('jump', 10, true);
         if (this.sprite.body.onFloor())
         {
-            this.sprite.body.velocity.y = -210;
-            this.sprite.body.mass.y = 50;
+            this.sprite.body.velocity.y = -200;
+            this.sprite.body.mass.y = 200;
         }
     }
 
     if (this.game.keyBoard.left.isDown)
     {
-        this.sprite.body.velocity.x = -150;
+        this.sprite.body.velocity.x = -200;
     }
     else if (this.game.keyBoard.right.isDown)
     {
-        this.sprite.body.velocity.x = 150;
+        this.sprite.body.velocity.x = 200;
     }
 };
 
@@ -71,3 +66,17 @@ Player.prototype.mort = function() {
         game.state.start('MenuState');
     };
 };
+
+// function changeSprite() {
+//     console.log("lol");
+//     // sprite.loadTexture('saut', 0);
+//     // sprite.animations.add('jump');
+//     // sprite.animations.play('jump', 3, true);
+// };
+
+// Player.prototype.changeSprite = function() {
+//     console.log("lol");
+//      // this.sprite.loadTexture('saut', 0);
+//     // this.sprite.animations.add('jump');
+//     // this.sprite.animations.play('jump', 3, true);
+// };

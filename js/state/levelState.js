@@ -42,6 +42,9 @@ LevelState.prototype =
     game.clone.sprite.body.bounce.y = 0.2;
     game.clone.sprite.linearDamping = 1;
     game.clone.sprite.collideWorldBounds = true;
+
+    //game.keyBoard.up.isDown.addOnce(changeSprite, this);
+   
   },
 
   update:  function(game)
