@@ -1,4 +1,4 @@
-var LevelState = function(game) {  }; 
+var LevelState = function(game) {}; 
 LevelState.prototype = 
 {
   preload: function(game) 

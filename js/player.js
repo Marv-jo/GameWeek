@@ -8,6 +8,8 @@ function Player(game, x, y) {
     this.sprite = game.add.sprite(this.x, this.y, 'player');
     this.sprite.animations.add('walk');
 
+    this.saut = game.add.sprite(this.x, this.y, 'saut');
+
     // this.sprite = {
     //     runRight: game.add.sprite(this.x, this.y, 'player')
     // };
