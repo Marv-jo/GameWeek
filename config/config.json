@@ -15,7 +15,9 @@
     ],
     "spriteTiled" : [
         {"name": "sortie", "src": "assets/sortie.png", "width": 64, "height" : 128},
-        {"name": "entree", "src": "assets/entree.png", "width": 64, "height" : 128}
+        {"name": "entree", "src": "assets/entree.png", "width": 64, "height" : 128},
+        {"name": "plateforme", "src": "assets/spriteplateforme1.png", "width": 192, "height" : 63},
+        {"name": "plateforme2", "src": "assets/spriteplateforme2.png", "width": 192, "height" : 63}
     ],
     "enemyLevel" : [
         {"id": "enemy1", "x": 10, "y": 10, "minX": 10, "maxX": 500},
