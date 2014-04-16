@@ -13,19 +13,63 @@
     "sprite" : [
         {"name": "player", "src": "assets/sprite-course-Jaques.png", "width": 64, "height" : 64, "nombre" : 8},
         {"name": "saut", "src": "assets/sprite-saut-Jaques.png", "width": 64, "height" : 64, "nombre" : 3},
-        {"name": "sortie", "src": "assets/sortie.png", "width": 64, "height" : 128, "nombre" : 8},
-        {"name": "entree", "src": "assets/entree.png", "width": 64, "height" : 128, "nombre" : 8},
         {"name": "runLeft", "src": "assets/sprite-course-left-Jaques.png", "width": 64, "height" : 64, "nombre" : 8}
     ],
     "spriteTiled" : [
         {"name": "sortie", "src": "assets/sortie.png", "width": 64, "height" : 128},
         {"name": "entree", "src": "assets/entree.png", "width": 64, "height" : 128},
         {"name": "plateforme", "src": "assets/spriteplateforme1.png", "width": 192, "height" : 63},
-        {"name": "plateforme2", "src": "assets/spriteplateforme2.png", "width": 192, "height" : 63},
-        {"name": "entree", "src": "assets/entree.png", "width": 64, "height" : 128}
+        {"name": "plateforme2", "src": "assets/spriteplateforme2.png", "width": 192, "height" : 63}
     ],
     "enemyLevel" : [
         {"id": "enemy1", "x": 10, "y": 10, "minX": 10, "maxX": 500},
         {"id": "enemy2", "x": 10, "y": 350, "minX": 10, "maxX": 500}
+    ],
+    "mapsLevel" : [
+                {
+                 "id": 1,
+                 "x":-36,
+                 "y":469
+                }, 
+                {
+                 "id": 1,
+                 "x":88,
+                 "y":469
+                }, 
+                {
+                 "id": 1,
+                 "x":368,
+                 "y":616
+                }, 
+                {
+                 "id": 1,
+                 "x":211,
+                 "y":469
+                }, 
+                {
+                 "id": 1,   
+                 "x":492,
+                 "y":616
+                }, 
+                {
+                 "id": 1,
+                 "x":616,
+                 "y":616
+                }, 
+                {
+                 "id": 2,
+                 "x":481,
+                 "y":330
+                }, 
+                {
+                 "id": 2,
+                 "x":889,
+                 "y":458
+                }, 
+                {
+                 "id": 1,
+                 "x":765,
+                 "y":459
+                }
     ]
 }
