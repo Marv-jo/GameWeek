@@ -5,7 +5,6 @@ LevelState.prototype =
   {
     game.load.tilemap('map', 'config/maps.json', null, Phaser.Tilemap.TILED_JSON);
     game.load.image('background', 'assets/digital.jpg');
-    game.load.spritesheet('player', 'assets/sprite-course-Jaques.png', 64, 64, 8);
     for (var i = 0 ; i  < list.assets.length ; i++){ 
       game.load.image(list.assets[i].name, list.assets[i].src);
     };
