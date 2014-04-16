@@ -7,6 +7,14 @@ function Player(game, x, y) {
     this.action = false;
     this.sprite = game.add.sprite(this.x, this.y, 'player');
     this.sprite.animations.add('walk');
+
+    // this.sprite = {
+    //     runRight: game.add.sprite(this.x, this.y, 'player')
+    // };
+
+    // this.sprite.runRight;
+
+    //test();
 }
 
 Player.prototype.move = function(){
@@ -29,13 +37,16 @@ Player.prototype.move = function(){
         this.sprite.x += this.vitesse;
         this.sprite.animations.play('walk', 5, true); 
     } else {
-        this.sprite.animations.stop;
+        
     }
 }
 
 Player.prototype.jump = function() {
     if (this.game.keyBoard.up.isDown)
     {
+        // this.sprite = game.add.sprite(this.x, this.y, 'saut');
+        // this.sprite.animations.add('jump');
+        // this.saut.animations.play('jump', 20, true); 
         if (this.sprite.body.onFloor())
         {
             this.sprite.body.velocity.y = -210;
@@ -54,6 +65,6 @@ Player.prototype.jump = function() {
 
 Player.prototype.mort = function() {
     if (this.dead) {
-         game.state.start('MenuState');
+        game.state.start('MenuState');
     };
 };
