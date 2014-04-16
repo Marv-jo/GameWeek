@@ -52,6 +52,7 @@ Player.prototype.jump = function() {
         if (this.sprite.body.onFloor())
         {
             this.sprite.body.velocity.y = -210;
+            this.sprite.body.mass.y = 50;
         }
     }
 
