@@ -39,10 +39,18 @@ LevelState.prototype =
     game.player.sprite.body.collideWorldBounds = true;
 
     game.clone.sprite.body.bounce.y = 0.2;
+<<<<<<< HEAD
     game.clone.sprite.body.linearDamping = 1;
     game.clone.sprite.body.collideWorldBounds = true;
     console.log(game.tiles.plateforme.children[1])
     console.log(game.tiles.plateforme.children[1].animations)
+=======
+    game.clone.sprite.linearDamping = 1;
+    game.clone.sprite.collideWorldBounds = true;
+
+    //game.keyBoard.up.isDown.addOnce(changeSprite, this);
+   
+>>>>>>> b5b70a7d7ab3676e96484f47965292427d4e3cfc
   },
 
   update:  function(game)
